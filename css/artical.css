@@ -1,0 +1,3 @@
+#mainWrap>section:not(.path),#mainWrap footer{
+	display: none;
+}

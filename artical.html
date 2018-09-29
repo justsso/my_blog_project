@@ -1,0 +1,163 @@
+<!DOCTYPE >
+<html>
+
+	<head>
+		<title>安妮小雅的博客</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width = device-width,initial-scale = 1.0,maximum-scale = 1.0" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/magic.css"/>
+		<link rel="stylesheet" type="text/css" href="css/artical.css"/>
+	</head>
+	<body>
+		<div id="mybody">
+			<div id="leftOpenBtn">&equiv;</div>
+			<div id="menuWrap">
+				<div class="leftInner">
+					<div id="head">
+						<div class="myPic">
+							<a href="aboutme.html" title="关于我"> <img alt="关于我" src="img/002.jpeg" /> </a>
+						</div>
+						<p class="slogan"> Believe in yourself<br />相信你自己 ! </p>
+					</div>
+					<div id="categoryList">
+						<!--<div class="categoryInner">
+						<nav>
+							<a href="#" title="html"><span> HTML </span><span>12</span> </a>
+						</nav>
+					</div>-->
+					</div>
+					<section>
+						<a href="aboutme.html" title="关于我"> 了解 &bull; 我 </a>
+					</section>
+					<div class="one"></div>
+					<div class="one"></div>
+				</div>
+			</div>
+			<div id="mainWrap">
+				<section class="path">
+					<a href="#"> 前端</a> > <a href="#">html</a>
+				</section>
+				<div class="content maininfo">
+<h1 class="magic-editor-title" style="">H5移动端知识点总结</h1>
+<h4 class="magic-editor-h4" style="">
+	<a id="一. 使用rem作为单位" name="一. 使用rem作为单位">一. 使用rem作为单位</a>
+</h4>
+<figure class="magic-editor-code" style="">
+	<div class="needscoll">
+		<table>
+			<tbody>
+				<tr>
+					<td><pre class="magic-editor-code-number"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></pre></td>
+					<td><pre class="magic-editor-code-code"><div class="magic-editor-code-line">html { font-size: 100px; }</div><div class="magic-editor-code-line">@media(min-width: 320px) { html { font-size: 100px; } }</div><div class="magic-editor-code-line">@media(min-width: 360px) { html { font-size: 112.5px; } }</div><div class="magic-editor-code-line">@media(min-width: 400px) { html { font-size: 125px; } }</div><div class="magic-editor-code-line">@media(min-width: 640px) { html { font-size: 200px; } }</div></pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</figure>
+<div class="magic-editor-N" style="">
+	给手机设置100px的字体大小; 对于320px的手机匹配是100px， 其他手机都是等比例匹配;
+	 因此设计稿上是多少像素的话，那么转换为rem的时候，rem = 设计稿的像素/100 即可;
+</div>
+<h4 class="magic-editor-h4" style="">
+	<a id="二.  禁用a,button,input,optgroup,select,textarea 等标签背景变暗" name="二.  禁用a,button,input,optgroup,select,textarea 等标签背景变暗">
+		二.  禁用a,button,input,optgroup,select,textarea 等标签背景变暗
+	</a>
+</h4>
+<div class="magic-editor-N" style="">
+	在移动端使用a标签做按钮的时候或者文字连接的时候，点击按钮会出现一个 “暗色的”背景
+	，比如如下代码： button1 在移动端点击后 会出现”暗色”的背景，这时候我们需要
+	在css加入如下代码即可：
+</div>
+<figure class="magic-editor-code" style="">
+	<div class="needscoll">
+		<table>
+			<tbody>
+				<tr>
+					<td><pre class="magic-editor-code-number"><div>1</div><div>2</div><div>3</div></pre></td>
+					<td><pre class="magic-editor-code-code"><div class="magic-editor-code-line">a,button,input,optgroup,select,textarea{</div><div class="magic-editor-code-line">    -webkit-tap-highlight-color: rgba(0,0,0,0);</div><div class="magic-editor-code-line">}</div></pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</figure>
+<h4 class="magic-editor-h4" style=""><a id="三. meta基础知识点：" name="三. meta基础知识点：">三. meta基础知识点：</a></h4>
+<div class="magic-editor-N" style="">
+	<ul>
+		<li>属性基本含义： content=”width=device-width： 控制 viewport 的大小,</li>
+		<li>device-width 为设备的宽度</li>
+		<li>initial-scale – 初始的缩放比例 </li>
+		<li> minimum-scale – 允许用户缩放到的最小比例</li> maximum-scale – 允许用户缩放到的最大比例
+		<li></li>
+		<li>user-scalable – 用户是否可以手动缩放</li>
+	</ul>
+</div>
+<h4 class="magic-editor-h4" style=""><a id="四：移动端如何定义字体font-family" name="四：移动端如何定义字体font-family">四：移动端如何定义字体font-family</a></h4>
+<div class="magic-editor-N" style="">body{font-family: “Helvetica Neue”, Helvetica, sans-serif;}</div>
+<h4 class="magic-editor-h4" style=""><a id="五：在android或者IOS下 拨打电话代码如下：" name="五：在android或者IOS下 拨打电话代码如下：">五：在android或者IOS下 拨打电话代码如下：</a></h4>
+<div class="magic-editor-code-img" style=""><img src="img/bg4.jpg"></div>
+				</div>
+				<div class="contentDetail">
+					<button> <i class="iconfont icon-xihuan"></i> 喜欢 </button>
+				</div>
+				<!--<div id="comment">-->
+					<!--评论部分-->
+					<!--<div class="writeCom">
+						
+						<form action="#">
+							<input type="image" name="userImg" id="userImg" value="二哈哈：" class="left"/>
+							<textarea ></textarea>
+							<input type="button" name="sure" id="sure" value="发布" class="right"/>
+						</form>
+					</div>-->
+					<!--<div class="comments">
+						<ul>
+							<li>
+								<span>
+									用户名：
+								</span>
+								<span>
+									招聘广告的解释 只要记住，会变好的。我所做的每一项工作，我都觉得自
+								</span>
+							</li>
+						</ul>
+					</div>-->
+				<!--</div>-->
+			</div>
+			<div id="rightWrap">
+				<div id="rightInner">
+					<div id="recommend">
+						<!--<h3>文章推荐</h3>
+						<ul class="recommList">
+							<li>
+								<i></i>
+								<a href="#" title="Python爬虫实战一之爬取糗事百科段子一之爬取糗事百科一之爬取糗事百科">Python爬虫实</a>
+							</li>
+						</ul>-->
+					</div>
+					<div id="search">
+						<form id="form1" action="#" method="post"><input type="text" placeholder="搜索" name="searchText" /><input type="button" value="" name="searchBtn" />
+						</form>
+					</div>
+					<div id="friendLink">
+						<!--<h3>友链小屋</h3>
+						<a href="#" title="我的朋友"> <span>使用使用的任使用的任的任务</span></a>
+						-->
+					</div>
+					<div id="rightOpenBtn">×</div>
+				</div>
+			</div>
+		</div>
+		<div id="panel">
+			<button><a href="#mainWrap">返回顶部</a></button>
+			<button><a href="aboutme.html">了解我</a></button>
+		</div>
+		<script type="text/javascript" src="js/tween.js" ></script>
+		<script src="js/gundong.js"></script>
+		<script src="js/info.js"></script>
+		<script src="js/common.js"></script>
+		<script src="js/artical.js"></script>
+	</body>
+
+</html>

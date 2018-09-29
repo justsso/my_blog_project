@@ -1,0 +1,947 @@
+/* reset.css*/
+body{
+	margin: 0;
+	font-family: helvetica ,"microsoft yahei", sans-serif; 
+}
+html,body{
+	height: 100%;	
+}
+h3,p{
+	margin: 0;
+}
+img{
+	border: none;
+}
+#mybody{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: auto;
+}
+ul,li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: left;
+}
+a{
+	text-decoration: none;
+	color: #666;
+}
+a:hover{
+	color: rgb(3,154,43);
+}
+input,button{
+	border: none;
+	outline: none;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+/*index.css*/
+
+#menuWrap{
+	position: fixed;
+	width: 4rem;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: rgb(227,235,238);
+	transition: all .3s ease-out;
+}
+
+.leftInner{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#menuWrap section{
+	display: none;
+	width: 88%;
+	text-align: center;
+	font-size: 0.5rem;
+	height: 1rem;
+	line-height: 1rem;
+	border: 1px solid ;
+	color: #D15151 ;
+	border-radius: 0.5rem;
+	margin: 10px auto;
+}
+
+.one{
+	margin: 20px;
+	background: blueviolet;
+	height: 300px;
+}
+#mainWrap{
+	position: absolute;
+	left: 4.2rem;
+	top: 0;
+	right: 5.3rem;
+	transition-duration: .5s;
+	transition-property: right;
+	transition-timing-function: ease-out;
+	z-index: 0;
+	opacity: 0;
+}
+
+#rightWrap{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 5rem;
+	background: #EEEEEE;
+	transition: width .5s ease-out;
+	overflow:hidden;
+}
+#rightInner{
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+}
+#scrollBar{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: red;
+	z-index: 2;
+	width: 8px;
+	height: 30px;
+}
+#scrollRoad{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 8px;
+	height: 100%;
+	background: #AAAAAA;
+	z-index: 1;
+}
+#rightOpenBtn{
+	position: fixed;
+	bottom: 0;
+	right: 5rem;
+	width: 0.6rem;
+	height: 0.6rem;
+	background: rgb(255,255,255);
+	color: rgb(255,133,0);
+	font-size: 0.8rem;
+	text-align: center;
+	line-height: 0.6rem;
+	transition:  all .5s;
+	opacity: 0.4;
+	cursor: pointer;
+}
+
+#rightOpenBtn:hover {
+	box-shadow: 0 0 0.3rem #000000;
+	opacity: 0.8;
+}
+
+/*左侧内容*/
+/*左侧开关*/
+#leftOpenBtn{
+	position: fixed;
+	left: 0rem;
+	bottom: 0;
+	width: 1rem;
+	height: 1rem;
+	background: rgb(255,255,255);
+	color: rgb(255,133,0);
+	font-size: 0.8rem;
+	text-align: center;
+	line-height: 1rem;
+	transition:  all .5s;
+	opacity: 0.3;
+	cursor: pointer;
+	z-index: 9999;
+	border: 1px solid #999;
+	transition: all .3s ease-out;
+	display: none;	
+}
+
+#leftOpenBtn:hover {
+	box-shadow: 0 0 0.3rem #000000;
+	opacity: 0.8;
+}
+
+/*个人介绍*/
+#head{
+	padding-top: 0.5rem;
+	text-align: center;
+}
+.myPic{
+	margin-bottom: 0.5rem;
+	position: relative;
+	top: -200px;
+}
+
+.myPic img{
+	border-radius: 30%;
+	width: 2rem;
+	height: 2rem;
+	transition: all .7s;
+	/*animation: rotateImg;
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+	animation-timing-function: linear;*/
+}
+
+.myPic:hover img{
+	transform: rotateY(0deg);
+	animation-play-state: paused;
+}
+@-webkit-keyframes rotateImg{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+p.slogan{
+	font-size: 0.25rem;
+	background: rgb(70,70,70);
+	padding: .5rem 0;
+	color: rgb(247,247,247);
+	line-height: 2;
+	position: relative;
+	right: 400px;
+}
+/* 类别分类*/
+#categoryList{
+	background: #FFFFFF;
+	/*border: 1px solid #CCCCCC;*/
+	width: 92%;
+	margin: 0 auto;
+	margin-top: 0.2rem;
+	position: relative;
+	opacity: 0;
+}
+#categoryList nav{
+	margin-bottom: 0.2rem;
+	position: relative;
+	right: 400px;
+}
+
+#categoryList a{
+	padding: 0.1rem 0 0.1rem 0.3rem;
+	display: block;
+	transition: all .5s;
+	height: 0.5rem;
+	width: 100%;
+	/*border: 1px solid #D15151;*/
+	line-height: 0.5rem;
+	font-size: 0.28rem;
+}
+#categoryList a:hover{
+	border-left: 0.2rem solid #20B2AA;
+}
+#categoryList a span {
+	display: inline-block;
+	font-size: 0.3rem;
+}
+#categoryList a span:first-child{
+	margin-right: 0.1rem;
+}
+
+/*右侧内容*/
+/*登录*/
+#login form {
+	text-align: center;
+	margin: 0;
+}
+#login form input{
+	display: block;
+	border: 1px solid #CCCCCC;
+	padding: 0.1rem;
+	margin: 0 auto;
+	margin-bottom: 0.3rem;
+	border-radius: 0.1rem;
+	
+}
+#login form input:focus{
+	border: 1px solid orangered;
+}
+#login form input[type='button']{
+	border: none;
+	padding: 0.1rem 0.7rem;
+	background: orange;
+	color: #fff;
+}
+#login form a{
+	font-size: 0.3rem;
+	text-decoration: underline;
+}
+/*推荐*/
+#recommend,#friendLink,#login{
+	border: 1px solid #CCCCCC;
+	box-sizing: border-box;
+	background: #FFFFFF;
+	overflow: hidden;
+	width: 4.5rem;
+	margin: 0 auto;
+	border-radius: 0.1rem;
+	margin-bottom: 0.2rem;
+	transition: all 0s ease 0s; 
+	transform-origin: center;
+	padding-bottom: 0.2rem;
+}
+#recommend:hover , #friendLink:hover ,#categoryList:hover{
+	box-shadow: 0 0 0.3rem #333333;
+}
+
+#recommend h3,#friendLink  h3,#login h3{
+	font-size: 0.35rem;
+	font-weight: 200;
+	border-bottom: 1px solid rgb(3,154,43);
+	text-indent: 0.3rem;
+	margin-bottom: 0.3rem;
+	padding: 0.2rem 0;
+}
+
+#recommend li{
+	/*background: #FFFFFF;*/
+	height: auto;
+	display: block;
+	margin-bottom: 0.2rem;
+	border-bottom: 1px dashed #CCCCCC;
+	text-indent: 0.3rem;
+	overflow: hidden;
+	padding-bottom: 0.1rem;
+}
+
+#recommend li i{
+	float: left;
+	margin-left: 0.1rem;
+	width: 0.4rem;
+	height: 0.4rem;
+	background: url(../img/icecream-07.png) no-repeat left top ;
+	background-size: 100%;
+}
+#recommend li i:before{
+	content: '';
+	/*添加字体图标*/
+}
+
+#recommend li a{
+	text-align: left;
+	font-size: 0.3rem;
+	padding-left: 0.1rem;
+	float: left;
+	width: 3.8rem;
+	color: #666666;
+}
+#recommend{
+	position: relative;
+	left: 400px;
+}
+#recommend ul{
+	position: relative;
+	top: 400px;
+}
+#recommend h3,#friendLink h3{
+	position: relative;
+	top: -100px;
+}
+#friendLink{
+	opacity: 0;
+}
+.clearfix:after{
+	content: '';
+	clear: both;
+	display: inline-block;
+	height: 0;
+	visibility: hidden;
+}
+
+#search{
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	background: #FFFFFF;
+	margin-bottom: 0.2rem;
+}
+#search form{
+	margin: 0;
+	text-align: center;
+	padding: 0.1rem 0;
+	overflow: hidden;
+	position: relative;
+}
+#search form input{
+	border: none;
+	outline: none;
+	float: left;
+}
+#search form input:first-child{
+	padding: 0;
+	border: 1px solid #CCCCCC;
+	height: 0.7rem;
+	border-radius: 0.1rem;
+	padding-left: 0.1rem;
+	color: #333;
+	margin-top: 0;
+	margin-left: 0.4rem;
+	width: 3.4rem;
+}
+#search form input:last-child{
+	width: 0.5rem;
+	height: 0.7rem;
+	background: url(../img/faj.png) no-repeat left center;
+	background-size: 100%;
+	position: absolute;
+	right: 1.5rem;
+	transition: all .3s ease-in;
+	
+}
+
+#friendLink a{
+	text-align: center;
+	float: left;
+	margin: 0 5px ;
+	display: block;
+	padding: 0.1rem;
+	margin-bottom: 0.3rem;
+	margin-right: 0.2rem;
+	border: 1px dashed #D15151;
+	border-radius: 0.1rem;
+	font-size: 0.3rem;
+}
+/*首页文章*/
+#mainWrap section{
+	margin: 0.4rem;
+	/*height: 6rem;*/
+	background: rgb(247,247,247);
+	padding: 0.4rem;
+	z-index: 9999;
+}
+#mainWrap section:hover{
+	box-shadow: 0 0 0.3rem rgb(222,222,222);
+}
+#mainWrap section:hover .artical>a>img{
+	transform: scale(1.1);
+}
+section .artical{
+	overflow: hidden;
+}
+section .artical>a{
+	width: 30%;
+	height: 3.3rem;
+	padding: 0.1rem;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.artical article{
+	width: 65%;
+	margin-left: 3%;
+}
+.artical>a>img{
+	display: inline-block;
+	width: 4.8rem;
+	width: 100%;
+	height: 100%;
+	transition: all .4s ease;
+}
+.artical article>a{
+	display: block;
+	width: 100%;
+	
+	margin-bottom: 0.4rem;
+	padding: 0.1rem;
+	
+}
+.artical article>a:hover{
+	color: rgb(238,91,46);
+}
+.artical h3{
+	display: inline-block;
+	font-size: 0.4rem;
+	transition: all .3s ease;
+}
+.artical h3:hover{
+	padding-left: 0.4rem;
+}
+.artical p{
+	font-size:0.3rem ;
+	text-indent: 2em;
+	overflow: hidden;
+}
+
+section .details{
+	margin-top: 0.4rem;
+	font-size: 0.29rem;
+	text-align: right;
+}
+section .details span{
+	padding: 0 0.15rem;
+	vertical-align: baseline;
+	color: #888;
+	cursor: pointer;
+}
+section .details span:hover{
+	color: orangered;
+}
+.details span i{
+	display: inline-block;
+	width: 0.4rem;
+	height: 0.4rem;
+	background-size: cover;
+	margin-right: 0.1rem;
+}
+.details span:first-child i{
+	font-size: 0.4rem;
+	color: blue;
+}
+.details span:last-child i{
+	color: hotpink;
+}
+/*页脚*/
+footer{
+	position: relative;
+	background: rgb(247,247,247);
+	padding: 0.43rem;
+	font-size: 0.4rem;
+}
+footer>a{
+	position: absolute;
+	top: 0.43rem;
+	width: 0.64rem;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	text-align: center;
+	border: 2px solid #CCCCCC;
+	border-radius: 50%;
+	transition: all 0.3s linear;
+}
+footer .prev{
+	left: 1.4rem;
+}
+footer .next{
+	right: 1.4rem;
+}
+footer .pages{
+	text-align: center;
+		
+}
+footer .pages>*{
+	display: inline-block;
+	width: 0.64rem;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	text-align: center;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	transition: all 0.3s linear;
+}
+footer .pages .cur{
+	border: 2px solid #93A2E2;
+}
+footer .pages a:hover,footer>a:hover{
+	border: 2px solid orangered;
+	color: orangered;
+}
+
+/*面包屑*/
+.path{
+	font-size: 0.3rem;
+}
+/*文章详情页*/
+div.content{
+	font-size: 0.32rem;
+	margin: 0.4rem;
+	background: white;
+	padding: 0.4rem;
+}
+div.content h1{
+	font-size: 0.6rem;
+	text-align: center;
+	color: orangered;
+}
+div.content article p{
+	margin-bottom: 0.6rem;
+	line-height: 1.7;
+	text-indent: 2em;
+	padding: 0 0.4rem;
+}
+div.content p img{
+	width: 8rem;
+	height: 6rem;
+}
+
+/*文章喜欢*/
+.contentDetail {
+	text-align: center;
+}
+.contentDetail button{
+	border: none;
+	outline: none;
+	padding: 0.2rem ;
+	background: pink;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+/*评论*/
+#comment{
+	margin: 0.4rem;
+	padding: 0.4rem;
+	background: rgb(247,247,247);
+}
+.writeCom{
+	background: #FFFFFF;
+}
+.writeCom textarea{
+	width:75%;
+	height: 3rem;
+	resize: none;
+	font-size: 0.3rem;
+}
+.writeCom [type='button']{
+	border: none;
+	outline: none;
+	width: 12%;
+	height: 0.6rem;
+	background: olive;
+	color: #fff;
+	line-height: 0.6rem;
+	text-align: center;
+	cursor: pointer;
+}
+/*所有评论*/
+.comments{
+	font-size: 0.28rem;
+}
+.comments li{
+	padding: 0.4rem 0;
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+/*关于我*/
+#mainWrap .aboutme,#workCollection{
+	font-size: 0.33rem;
+	text-align: center;
+	background: wheat;
+	color: #666;
+	width: 16rem;
+	margin: 0 auto ;
+	position: relative;
+	background: rgb(239,206,232);
+}
+.aboutme{
+	padding-bottom: 0.3rem;
+	height: 15rem;
+}
+.aboutme>div{
+	position: absolute;
+}
+.aboutme>div:first-child{
+	left: 260px;
+	top: 200px;
+	opacity: 1;
+}
+.aboutme>div:last-child{
+	right: -600px;
+	top: 0;
+}
+.aboutme section,#workCollection section{
+	padding: 0;
+	background: #FFFFFF!important;
+}
+.aboutme h3,#workCollection section >h3{
+	background: rgb(125,194,52);
+	margin-bottom: 0.3rem;
+	font-weight: normal;
+	color: white;
+	padding: 0.05rem 0;
+	transform: scale(1.1);
+}
+.xiaoya{
+	opacity: 0;
+	
+}
+.xiaoya h3,.contact h3{
+	transform: scale(1.3);
+}
+.aboutme img{
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	border: 6px solid rgb(239,206,232);
+	border: 6px solid  rgb(125,194,52);
+}
+.aboutme p{
+	line-height: 2;
+}
+.aboutme p a img{
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+}
+
+#skill{
+	position: absolute;
+	background: rgba(0,0,0,0);
+	left: 0;
+	top: 20px;
+}
+#canvas{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	background: rgba(0,0,0,0);
+	z-index: 1;
+}
+#tree{
+	position: absolute;
+	left: 50%;
+	top: 0;
+	z-index: 3;
+	transform: scale(0);
+	transition: all .5s;
+	transition-delay: 3s;
+}
+section.aboutTime,section.skill{
+	position: relative;
+	width: 9rem;
+	height: 5rem;
+}
+section.skill{
+	height: 7rem;
+}
+section.aboutTime li{
+	position: absolute;
+	background: rgba(125,194,52,0.5);
+	padding: 0.1rem;
+}
+section.aboutTime li p{
+	font-size: 0.3rem;
+}
+section.aboutTime li:nth-child(2n+1){
+	left: 0.3rem;
+}
+section.aboutTime li:nth-child(2n){
+	right: 0.3rem;
+	top: 2.7rem;
+}
+section.aboutTime li em{
+	position: absolute;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 0.2rem solid transparent;
+	top: 0.4rem;
+}
+section.aboutTime li:nth-child(2n+1) em{
+	right: -0.4rem;
+	border-left-color: rgba(125,194,52,0.5);
+}
+section.aboutTime li:nth-child(2n) em{
+	left: -0.4rem;
+	border-right-color: rgba(125,194,52,0.5);
+}
+section.contact li{
+	padding: 0.1rem;
+	cursor: pointer;
+}
+section.contact li:hover{
+	color: rgb(125,194,52);
+}
+span.timeScroll{
+	display: block;
+	width: 4px;
+	height: 4rem;
+	background:rgb(125,194,52);
+	position: absolute;
+	left: 56%;
+}
+section.contact{
+	opacity: 0;
+}
+/*右击自定义菜单*/
+#panel{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: white;
+	padding: 0.2rem 0;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px 0 #000000;
+}
+#panel>button{
+	width: 100%;
+	display: block;
+	background: white;
+	font-size: 0.4rem;
+}
+#panel>button:hover{
+	background: rgb(190,224,153);
+}
+#workCollection{
+	/*作品集*/
+	overflow: hidden;
+}
+#workCollection section >h3{
+	font-size: 0.4rem;
+}
+#workCollection img{
+	width: 4rem;
+	height: 3rem;
+}
+#workCollection ul{
+	margin: 0.5rem auto;
+}
+#workCollection figure{
+	display: inline-block;
+	width: 4rem;
+	background: white;
+	float: left;
+	margin: 0;
+	border: 3px solid rgb(125,194,52);
+	margin-right: 0.6rem;
+	padding: 0.1rem;
+	margin-bottom: 0.5rem;
+}
+#workCollection figcaption{
+	font-size: 0.3rem;
+	color:#333333;
+}
+
+
+@media only screen and (min-width: 1000px ) {
+	/*电脑  1rem = 50px*/
+	html,body{
+		font-size: 50px;
+	}
+	#mainWrap{
+		right: 5.2rem;
+	}
+	#rightWrap{
+		width: 5rem;
+	}
+	#menuWrap{
+		width: 4rem;
+	}
+	#openLeftBtn{
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width:1000px) {
+	html,body{
+		font-size: 40px;
+	}
+	#rightWrap{
+		display: none;
+	}
+	#mainWrap{
+		right: 0;
+	}
+	#menuWrap{
+		min-width: 4rem;
+	}
+	#openLeftBtn{
+		display: block;
+	}
+	.artical article{
+		width: 63%;
+	}
+}
+@media only screen and (max-width: 680px ) {
+	html,body{
+		font-size: 40px;
+	}
+	section .details span{
+		padding: 0 0.01rem;
+	}
+}
+@media only screen and (max-width: 600px ) {
+	html,body{
+		font-size: 35px;
+	}
+	#rightWrap,#head,#skill{
+		display: none;
+	}	
+	#menuWrap{
+		width: 6rem;
+		left: -6rem;
+		z-index: 2;
+	}
+	#menuWrap section{
+		display: block;
+	}
+	#leftOpenBtn{
+		display: block;
+	}
+	#mainWrap{
+		left: 0;
+		width: 100%;
+		z-index: 1;
+		background: rgba(0,0,0,0);
+	}
+	#mainWrap section{
+		width: 100%;
+		margin: 0.4rem 0;
+		padding: 0.2rem 0;
+	}
+	section .details{
+		display: none;
+	}
+	section .artical>a{
+		float: left;
+		width: 26%;
+		height: 2rem;
+	}
+	.artical article>a{
+		margin-bottom: 0;
+		
+	}
+	.artical article{
+		float: none;
+		margin-left: 33%;
+	}
+	#categoryList{
+		width: 98%;
+		
+	}
+	#categoryList a{
+		height: 1rem;
+		line-height: 1rem;
+	}	
+	#categoryList a span {
+		font-size: 0.4rem;
+	}	
+	.path{
+		font-size: 0.43rem;
+	}
+	div.content{
+		font-size: 0.4rem;
+	}
+	div.content article p,.artical p{
+		font-size: 0.36rem;
+		color: #666666;
+	}
+	div.content p img{
+		width: 100%;
+		margin-left:-2em;;
+	}
+	.writeCom textarea{
+		width: 100%;
+		font-size: 0.38rem;
+	}
+	/*所有的评论*/
+	.comments{
+		font-size: 0.38rem;
+	}
+}
+
+
+
+
+
+

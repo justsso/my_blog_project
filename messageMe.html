@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>给我留言</title>
+	</head>
+	<body>
+		<form action="#" method="post" id="form">
+			<input type="text" value="" placeholder="123" />
+			<input type="submit" value="提交"/>
+			<input type="reset" name="" id="" value="重置" />
+		</form>
+		<script>
+			var form = document.getElementById("form");
+			form.onreset = function(e){
+				
+				e.preventDefault();
+			}
+		</script>
+	</body>
+</html>
